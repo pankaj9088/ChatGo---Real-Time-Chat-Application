@@ -1,6 +1,6 @@
 # ChatGo - Real-time Chat & Video Calling App
 
-A production-ready WhatsApp-like web application with real-time messaging and video calling capabilities.
+ChatGo is a real-time chat application designed for fast, secure, and seamless communication. It enables users to exchange messages instantly with a smooth and responsive interface, making conversations feel natural and engaging.
 
 ## 🚀 Features
 
