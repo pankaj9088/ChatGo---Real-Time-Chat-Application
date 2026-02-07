@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 p-0 font-sans antialiased;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+
+  /* Scrollbar Styles */
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-gray-500;
+  }
+
+  /* Custom Button */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 dark:bg-dark-hover hover:bg-gray-300 dark:hover:bg-dark-border text-gray-800 dark:text-gray-200 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  /* Input Styles */
+  .input-field {
+    @apply w-full px-4 py-3 bg-light-panel dark:bg-dark-panel border border-light-border dark:border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400;
+  }
+
+  /* Chat Message Bubble */
+  .message-bubble {
+    @apply max-w-[65%] rounded-lg px-3 py-2 shadow-sm;
+  }
+
+  .message-sent {
+    @apply bg-[#d9fdd3] dark:bg-[#005c4b] ml-auto;
+  }
+
+  .message-received {
+    @apply bg-white dark:bg-dark-panel;
+  }
+
+  /* Card */
+  .card {
+    @apply bg-light-panel dark:bg-dark-panel rounded-lg shadow-md p-4;
+  }
+
+  /* Avatar */
+  .avatar {
+    @apply rounded-full object-cover;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-primary rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom animations */
+@keyframes typing {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-10px);
+  }
+}
+
+.typing-dot {
+  animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Video call styles */
+.video-container {
+  @apply relative w-full h-full bg-black rounded-lg overflow-hidden;
+}
+
+.video-local {
+  @apply absolute bottom-4 right-4 w-32 h-24 rounded-lg shadow-lg z-10;
+}
+
+.video-remote {
+  @apply w-full h-full object-cover;
+}
+
+/* Emoji picker custom styles */
+.emoji-picker-react {
+  @apply border-none shadow-lg !important;
+}
+
+.emoji-picker-react .emoji-scroll-wrapper {
+  @apply scrollbar-thin !important;
+}
+
+/* Mirror effect for local video */
+.mirror {
+  transform: scaleX(-1);
+}
